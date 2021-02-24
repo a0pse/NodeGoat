@@ -18,9 +18,9 @@ function ResearchHandler(db) {
                     res.writeHead(200, {
                         'Content-Type': 'text/html'
                     });
-                res.write('<h1>The following is the stock information you requested.</h1>\n\n');
-                res.write('\n\n');
-                res.write(newResponse.body);
+                res.render('<h1>The following is the stock information you requested.</h1>\n\n');
+                res.render('\n\n');
+                res.render(newResponse.body);
                 return res.end();
             });
         }
